@@ -1,0 +1,5 @@
+{
+  "name": "Zakariyya AI App",
+  "description": "A simple and elegant AI chat application powered by Google Gemini, built with React and Tailwind CSS.",
+  "requestFramePermissions": []
+}
