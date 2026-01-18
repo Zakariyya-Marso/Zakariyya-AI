@@ -13,21 +13,18 @@
     "react-dom": "https://esm.sh/react-dom@19.0.0",
     "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
     "@google/genai": "https://esm.sh/@google/genai@0.21.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/"
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
   }
 }
 </script>
     <style>
-      /* Custom scrollbar for that gritty aesthetic */
       ::-webkit-scrollbar { width: 6px; }
       ::-webkit-scrollbar-track { background: #09090b; }
       ::-webkit-scrollbar-thumb { background: #7f1d1d; border-radius: 10px; }
       ::-webkit-scrollbar-thumb:hover { background: #b91c1c; }
       
-      .gold-glow {
-        box-shadow: 0 0 20px rgba(245, 158, 11, 0.2);
-      }
+      .gold-glow { box-shadow: 0 0 20px rgba(245, 158, 11, 0.2); }
       
       @keyframes gold-shimmer {
         0% { background-position: -200% 0; }
@@ -45,7 +42,6 @@
 </head>
 <body class="bg-zinc-950 text-gray-100 selection:bg-red-500/30">
     <div id="root" class="h-screen w-full flex flex-col overflow-hidden"></div>
-    <!-- Using babel to transpile TSX in the browser for zero-config hosting -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel" data-type="module">
       import './index.tsx';
