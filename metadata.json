@@ -1,5 +1,8 @@
 {
-  "name": "Zakariyya AI App",
-  "description": "A simple and elegant AI chat application powered by Google Gemini, built with React and Tailwind CSS.",
-  "requestFramePermissions": []
+  "name": "Zakariyya AI - God Mode",
+  "description": "A genius-level AI with a massive attitude and gold-plated GUI. Solve problems or get insulted.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
 }

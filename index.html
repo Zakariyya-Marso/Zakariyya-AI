@@ -3,22 +3,52 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zakariyya AI App</title>
+    <title>Zakariyya AI - God Mode</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-<script type="importmap">
+    <script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "@google/genai": "https://esm.sh/@google/genai@0.21.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
   }
 }
 </script>
+    <style>
+      /* Custom scrollbar for that gritty aesthetic */
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: #09090b; }
+      ::-webkit-scrollbar-thumb { background: #7f1d1d; border-radius: 10px; }
+      ::-webkit-scrollbar-thumb:hover { background: #b91c1c; }
+      
+      .gold-glow {
+        box-shadow: 0 0 20px rgba(245, 158, 11, 0.2);
+      }
+      
+      @keyframes gold-shimmer {
+        0% { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
+      }
+      
+      .animate-gold-text {
+        background: linear-gradient(90deg, #f59e0b, #ef4444, #f59e0b);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gold-shimmer 3s linear infinite;
+      }
+    </style>
 </head>
-<body class="bg-zinc-950 flex items-center justify-center min-h-screen">
-    <div id="root" class="w-full h-screen bg-zinc-950 flex flex-col overflow-hidden"></div>
-    <script type="module" src="/index.tsx"></script>
+<body class="bg-zinc-950 text-gray-100 selection:bg-red-500/30">
+    <div id="root" class="h-screen w-full flex flex-col overflow-hidden"></div>
+    <!-- Using babel to transpile TSX in the browser for zero-config hosting -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" data-type="module">
+      import './index.tsx';
+    </script>
 </body>
 </html>
